@@ -1,0 +1,27 @@
+{
+  "name": "008",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@opentui/core": "^0.1.25",
+    "chalk": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "eslint": "^8.57.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "prettier": "^3.2.5"
+  },
+  "scripts": {
+    "lint": "eslint src/**/*.ts index.ts",
+    "format": "prettier --write src/**/*.ts index.ts",
+    "build:th": "bun build --compile th.ts --outfile th",
+    "install:th": "mkdir -p ~/.bun/bin && cp th ~/.bun/bin/th && chmod +x ~/.bun/bin/th",
+    "uninstall:th": "rm -f ~/.bun/bin/th"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
